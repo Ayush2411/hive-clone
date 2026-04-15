@@ -6,7 +6,7 @@ metadata:
 spec:
   description: Security platform workloads
   sourceRepos:
-    - "https://github.com/YOUR_ORG/YOUR_REPO.git"
+    - "https://github.com/Ayush2411/hive-clone.git"
   destinations:
     - namespace: thehive
       server: https://kubernetes.default.svc
