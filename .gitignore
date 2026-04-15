@@ -1,0 +1,13 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!.terraform.lock.hcl
+
+# Generated local secrets. Use Secret Manager/External Secrets before production.
+k8s/overlays/gcp-free-tier/secrets/*.yaml
+!k8s/overlays/gcp-free-tier/secrets/*.example.yaml
+
+# Local kubeconfig and tooling output.
+kubeconfig*
+argocd-initial-admin-password.txt

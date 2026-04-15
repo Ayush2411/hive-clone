@@ -1,0 +1,10 @@
+org_id           = "356024295871"
+billing_account  = "01C7F4-89CD45-E3E680"
+project_id       = "thehive-soar-lab-12345"
+project_name     = "thehive-soar-lab"
+region           = "us-central1"
+zone             = "us-central1-a"
+cluster_name     = "thehive-gke"
+node_machine_type = "e2-standard-2"
+node_count        = 1
+disk_size_gb      = 50

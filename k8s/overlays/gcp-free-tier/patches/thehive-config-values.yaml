@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: thehive-config
+  namespace: thehive
+data:
+  application.conf: |
+    play.http.secret.key = ${?THEHIVE_SECRET}
+
+    http.address = "0.0.0.0"
+    http.port = 9000
+
+    db.janusgraph {
+      storage {
+        backend = cql
+        hostname = ["cassandra.thehive.svc.cluster.local"]
+        cql {
+          cluster-name = "thehive"
+          keyspace = "thehive"
+        }
+      }
+
+      index.search {
+        backend = elasticsearch
+        hostname = ["elasticsearch.thehive.svc.cluster.local"]
+        index-name = "thehive"
+      }
+    }
+
+    storage {
+      provider = localfs
+      localfs.location = "/opt/thp/thehive/files"
+    }
+
+    auth {
+      providers = [
+        { name = session }
+        { name = basic, realm = thehive }
+      ]
+    }
+
+    application.baseUrl = "http://REPLACE_WITH_THEHIVE_HOST_OR_IP"

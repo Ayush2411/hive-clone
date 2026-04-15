@@ -1,0 +1,9 @@
+# Optional remote state backend.
+# Create this bucket before enabling the backend block.
+#
+# terraform {
+#   backend "gcs" {
+#     bucket = "YOUR_TERRAFORM_STATE_BUCKET"
+#     prefix = "thehive-soar"
+#   }
+# }

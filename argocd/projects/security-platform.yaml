@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: security-platform
+  namespace: argocd
+spec:
+  description: Security platform workloads
+  sourceRepos:
+    - "https://github.com/YOUR_ORG/YOUR_REPO.git"
+  destinations:
+    - namespace: thehive
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  orphanedResources:
+    warn: true
