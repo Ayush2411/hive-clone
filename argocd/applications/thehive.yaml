@@ -8,7 +8,7 @@ metadata:
 spec:
   project: security-platform
   source:
-    repoURL: "https://github.com/YOUR_ORG/YOUR_REPO.git"
+    repoURL: "https://github.com/Ayush2411/hive-clone.git"
     targetRevision: main
     path: k8s/overlays/gcp-free-tier
   destination:
