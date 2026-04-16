@@ -40,4 +40,4 @@ data:
       ]
     }
 
-    application.baseUrl = "http://REPLACE_WITH_THEHIVE_HOST_OR_IP"
+    application.baseUrl = "http://34.149.83.255"
