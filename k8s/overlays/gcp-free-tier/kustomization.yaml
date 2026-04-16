@@ -5,6 +5,7 @@ resources:
 patches:
   - path: patches/thehive-gcp-values.yaml
   - path: patches/thehive-config-values.yaml
+  - path: patches/lab-resource-requests.yaml
 labels:
   - includeSelectors: true
     pairs:
