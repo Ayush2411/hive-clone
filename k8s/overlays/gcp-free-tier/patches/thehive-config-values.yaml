@@ -17,6 +17,7 @@ data:
         cql {
           cluster-name = "thehive"
           keyspace = "thehive"
+          local-datacenter = "gcp"
         }
       }
 
