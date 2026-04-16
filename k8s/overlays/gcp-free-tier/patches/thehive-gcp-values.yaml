@@ -23,5 +23,5 @@ spec:
             driver: gcsfuse.csi.storage.gke.io
             readOnly: false
             volumeAttributes:
-              bucketName: REPLACE_WITH_PROJECT_ID-thehive-attachments
+              bucketName: thehive-soar-lab-12345-thehive-attachments
               mountOptions: "implicit-dirs"
