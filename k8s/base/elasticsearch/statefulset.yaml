@@ -28,6 +28,7 @@ spec:
             runAsUser: 0
             allowPrivilegeEscalation: false
             capabilities:
+              add: ["CHOWN", "DAC_OVERRIDE", "FOWNER"]
               drop: ["ALL"]
           volumeMounts:
             - name: data
